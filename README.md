@@ -4,6 +4,9 @@ This is the simplest possible setup for Cucumber-JVM using Java with Maven.
 There is nothing fancy like a webapp or browser testing. All this does is to
 show you how to set up and run Cucumber!
 
+There is a single feature file with one scenario. The scenario has three steps,
+one passing, skipped and undefined. See if you can make them all pass!
+
 To write assertions the project comes with [AssertJ](https://assertj.github.io/doc/#assertj-core-assertions-guide)
 included. 
 
@@ -12,7 +15,7 @@ included.
 Git:
 
     git clone https://github.com/cucumber/cucumber-jvm-starter-maven-java.git
-    cd cucumber-java-skeleton
+    cd cucumber-jvm-starter-maven-java
 
 Or [download a zip](https://github.com/cucumber/cucumber-jvm-starter-maven-java/archive/main.zip) file.
 
@@ -70,7 +73,7 @@ mvn verify -DexcludedGroups="Haricots" -Dgroups="Zucchini | Gherkin"
 
 ### Running a single scenario or feature
 
-Maven and Gradle do not (yet) support selecting single features or scenarios
+Maven does not (yet) support selecting single features or scenarios
 with JUnit selectors. As a work around the `cucumber.features` property can be
 used. Because this property will cause Cucumber to ignore any other selectors
 from JUnit it is prudent to only execute the Cucumber engine.
